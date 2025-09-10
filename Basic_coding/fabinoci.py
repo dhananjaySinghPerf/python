@@ -6,4 +6,5 @@ def fibonacci_series(n):
         a, b = b, a + b  # Update for the next iteration
     return series
 
-print(fibonacci_series(1))
+ln = int(input("Enter the length of the sequesnce \n"))
+print("The series is \n",fibonacci_series(ln))
