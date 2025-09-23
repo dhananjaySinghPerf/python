@@ -1,5 +1,8 @@
-print("Hello World")
+b = {}
 
-a = "new"
+a = "nepleaww"
 for n in a:
-    print(n)
+    print(b)
+    b[n] = b.get(n,0) + 1
+    
+print(b)

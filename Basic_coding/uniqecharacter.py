@@ -1,2 +1,5 @@
-word = "Hello World - Day"
-print(set(word))
+word = input("Enter the text here\n")
+clean_text = word.strip()
+remove_space = clean_text.replace(" ","")
+caseInsensitive = remove_space.lower()
+print("Total number of unique char is ",len(set(caseInsensitive)))
