@@ -1,8 +1,10 @@
-b = {}
-
+b = {"apple":"fruit", "book":"yes"}
 a = "nepleaww"
-for n in a:
-    print(b)
-    b[n] = b.get(n,0) + 1
-    
-print(b)
+
+max_sum = float('-inf') 
+
+arr = []
+for _ in range(6):
+    arr.append(list(map(int, input().rstrip().split())))
+
+print(arr)
