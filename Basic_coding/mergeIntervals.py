@@ -26,9 +26,10 @@ def merge(intervals):
     if not intervals:
         return []
     
+    print("befter sort", intervals)
     # Sort intervals based on the start time
     intervals.sort(key=lambda x: x[0])
-    
+    print("after sort", intervals)
     merged = [intervals[0]]
     
     for current in intervals[1:]:
@@ -44,5 +45,5 @@ def merge(intervals):
     
     return merged
 
-intervals = [[1,3],[2,6],[8,10],[15,18]]
+intervals = [[1,3],[2,6],[15,18],[8,10]]
 print(merge(intervals))
