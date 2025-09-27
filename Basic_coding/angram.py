@@ -22,7 +22,7 @@ s and t consist of lowercase English letters.
 
 '''
 
-def isAnagram(s, t):
+def isAnagram_1(s, t):
     if len(s) != len(t):
         return False
     
@@ -39,7 +39,7 @@ def isAnagram(s, t):
 
 ##########################################################
 
-def isAnagramOpt(s, t):
+def isAnagramOpt_2(s, t):
     if len(s) != len(t):
         return False
     
@@ -54,3 +54,24 @@ def isAnagramOpt(s, t):
         count[char] -= 1
     
     return True
+
+    ########################################
+
+def isAnagram(s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if len(s) != len(t):
+            return False
+
+        for letter in set(s):
+            print(t.count(letter))
+            
+            if t.count(letter) != s.count(letter):
+                return False
+        
+        return True 
+
+print(isAnagram("rohirt","hritro"))

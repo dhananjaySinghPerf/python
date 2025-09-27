@@ -3,7 +3,9 @@ def is_valid(s: str) -> bool:
     stack = []
     for ch in s:
         if ch in pairs.values():  # opening
+            print(ch)
             stack.append(ch)
+            print(stack)
         elif ch in pairs:        # closing
             if not stack or stack.pop() != pairs[ch]:
                 return False
@@ -13,5 +15,5 @@ def is_valid(s: str) -> bool:
     return not stack
 
 # tests
-print(is_valid("({[]})"))  # True
+#print(is_valid("({[]})"))  # True
 print(is_valid("([)]"))    # False
