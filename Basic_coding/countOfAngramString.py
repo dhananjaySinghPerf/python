@@ -19,7 +19,12 @@ def count_anagrammatic_pairs(s):
     count = 0
     for key in freq_map:
         freq = freq_map[key]
+        print("freq",freq)
         if freq > 1:
             count += (freq * (freq - 1)) // 2  # nC2 pairs
+            print("count",count)
 
     return count
+
+print(count_anagrammatic_pairs("abbaba"))
+

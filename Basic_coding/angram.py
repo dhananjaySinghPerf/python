@@ -67,8 +67,6 @@ def isAnagram(s, t):
             return False
 
         for letter in set(s):
-            print(t.count(letter))
-            
             if t.count(letter) != s.count(letter):
                 return False
         

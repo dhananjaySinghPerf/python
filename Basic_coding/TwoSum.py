@@ -29,13 +29,9 @@ def twoSum(nums, target):
     seen = {}  # num -> index
     for i, num in enumerate(nums):
         complement = target - num
-        print("complement",complement)
-        print("Seen", seen)
         if complement in seen:
             return [seen[complement], i]
         seen[num] = i
-        print(seen[num])
-        print(seen.keys())
     return []
 
 

@@ -3,12 +3,9 @@ def matchingStrings(stringList, queries):
     freq = {}
     for s in stringList:
         freq[s] = freq.get(s, 0) + 1
-
-    print(freq)
     # Step 2: Look up each query
     result = []
     for q in queries:
-        print(freq.get(q, 0))
         result.append(freq.get(q, 0))
 
     return result
